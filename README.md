@@ -69,7 +69,7 @@ To run this project locally, clone the repository and install the dependencies:
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone git@github.com:omdasoft/multi-rate-pricing-calculator.git
 cd multi-rate-pricing-calculator
 
 # Install PHP dependencies
