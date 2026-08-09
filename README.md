@@ -63,6 +63,37 @@ A future frontend can consume the existing REST API to provide:
 
 Vue.js would be the preferred choice for the dashboard, although the API is framework-agnostic and can also be consumed by React or other clients.
 
+## API Endpoints
+
+All endpoints are prefixed with `/api/v1` and expect/return `application/json`. Endpoints requiring authentication expect an `Authorization: Bearer <token>` header provided by Laravel Sanctum.
+
+### Authentication
+
+* `POST /api/v1/register` - Register a new user
+* `POST /api/v1/login` - Authenticate and return an access token
+* `POST /api/v1/logout` - Revoke the current access token (Auth required)
+
+### Documents
+
+* `GET /api/v1/documents` - List the authenticated user's documents
+* `POST /api/v1/documents` - Create a new draft document
+* `GET /api/v1/documents/{document}` - Retrieve a specific document
+* `PUT /api/v1/documents/{document}` - Update a draft document's metadata
+* `DELETE /api/v1/documents/{document}` - Delete a draft document
+* `POST /api/v1/documents/{document}/finalize` - Finalize a draft document (makes it immutable)
+* `POST /api/v1/documents/{document}/duplicate` - Duplicate a document into a new draft
+
+### Line Items
+
+* `POST /api/v1/documents/{document}/line-items` - Add a line item to a draft document
+* `PUT /api/v1/documents/{document}/line-items/{lineItem}` - Update a line item
+* `DELETE /api/v1/documents/{document}/line-items/{lineItem}` - Remove a line item
+
+### Reports
+
+* `GET /api/v1/reports/summary` - Get a summary of totals across finalized documents within a date range
+
+
 ## Setup
 
 To run this project locally, clone the repository and install the dependencies:
