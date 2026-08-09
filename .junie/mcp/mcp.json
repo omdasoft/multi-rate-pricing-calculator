@@ -1,0 +1,11 @@
+{
+    "mcpServers": {
+        "laravel-boost": {
+            "command": "C:\\Users\\emade\\.config\\herd\\bin\\php83\\php.exe",
+            "args": [
+                "C:\\Users\\emade\\Herd\\multirate-pricing-task\\artisan",
+                "boost:mcp"
+            ]
+        }
+    }
+}
