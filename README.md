@@ -7,6 +7,7 @@ The current implementation focuses on the backend API and core business logic. T
 ## Live URL
 
 * **Deployed API:** https://task.omdasoft.dev
+* **API documentation:** https://task.omdasoft.dev/docs/api
 
 ## Stack
 
